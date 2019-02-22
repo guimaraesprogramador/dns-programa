@@ -20,13 +20,21 @@ namespace dns
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dns_client.enderenco = texto.Text;
-            dns_client dns = new dns_client();
-            Socket DNS_RAIZ=  dns.acessar_internet();
-            if(DNS_RAIZ.Connected.ToString()!= string.Empty)
+            try
             {
-                webBrowser1.Navigate(DNS_RAIZ.Connected.ToString());
+                dns_client dns = new dns_client();
+                Socket DNS_RAIZ = dns.acessar_internet(texto.Text);
+                if (DNS_RAIZ.Connected.ToString() != null)
+                {
+                    webBrowser1.Navigate(DNS_RAIZ.LocalEndPoint.AddressFamily.ToString());
+                }
+                
             }
+            catch (Exception)
+            {
+                MessageBox.Show("nao encontrou o enderenço");
+            }
+          
         }
     }
 }

@@ -11,15 +11,16 @@ namespace dns.dns_part
 {
     class dns_client
     {
-        public static string enderenco { get; set; }
-        public Socket acessar_internet()
+        public Socket acessar_internet(string enderenco)
         {
             try
             {
+
+                
                 Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPHostEntry iPHost = Dns.Resolve(enderenco);
-                IPAddress iPAddress = iPHost.AddressList[0];
-                IPEndPoint iPEnd = new IPEndPoint(iPAddress, tcp_client.porta_entra);
+                var ip = Dns.GetHostByName(enderenco);
+                IPAddress iPAddress = ip.AddressList[0];
+                IPEndPoint iPEnd = new IPEndPoint(iPAddress, 443);
                 s.Connect(iPEnd);
                 return s;
             }

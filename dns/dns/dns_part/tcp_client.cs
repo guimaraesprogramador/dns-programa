@@ -10,8 +10,8 @@ namespace dns.dns_part
     {
         public static int porta_entra {
             get {
-                
-                    return 80;
+
+                return 80;
                 }
                  }
         public void conncert_internet()
