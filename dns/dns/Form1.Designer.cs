@@ -31,6 +31,12 @@
             this.texto = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.host = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.port = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tcp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // texto
@@ -59,11 +65,68 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 346);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "host:";
+            // 
+            // host
+            // 
+            this.host.AutoSize = true;
+            this.host.Location = new System.Drawing.Point(73, 346);
+            this.host.Name = "host";
+            this.host.Size = new System.Drawing.Size(0, 13);
+            this.host.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 385);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Port:";
+            // 
+            // port
+            // 
+            this.port.AutoSize = true;
+            this.port.Location = new System.Drawing.Point(73, 385);
+            this.port.Name = "port";
+            this.port.Size = new System.Drawing.Size(0, 13);
+            this.port.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 428);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "protocolo:";
+            // 
+            // tcp
+            // 
+            this.tcp.AutoSize = true;
+            this.tcp.Location = new System.Drawing.Point(72, 433);
+            this.tcp.Name = "tcp";
+            this.tcp.Size = new System.Drawing.Size(0, 13);
+            this.tcp.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tcp);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.port);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.host);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.texto);
@@ -79,6 +142,12 @@
         private System.Windows.Forms.TextBox texto;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label host;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label port;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label tcp;
     }
 }
 

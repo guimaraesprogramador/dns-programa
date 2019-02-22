@@ -27,8 +27,11 @@ namespace dns
                 Socket DNS_RAIZ = dns.acessar_internet(uri);
                 if (DNS_RAIZ.Connected.ToString() != null)
                 {
-                    
+
                     webBrowser1.Url = uri;
+                    host.Text = uri.Host;
+                   port.Text =  uri.Port.ToString();
+                    tcp.Text = DNS_RAIZ.ProtocolType.ToString();
                 }
                 
             }
