@@ -23,10 +23,12 @@ namespace dns
             try
             {
                 dns_client dns = new dns_client();
-                Socket DNS_RAIZ = dns.acessar_internet(texto.Text);
+                Uri uri = new Uri(texto.Text);
+                Socket DNS_RAIZ = dns.acessar_internet(uri);
                 if (DNS_RAIZ.Connected.ToString() != null)
                 {
-                    webBrowser1.Navigate(DNS_RAIZ.LocalEndPoint.AddressFamily.ToString());
+                    
+                    webBrowser1.Url = uri;
                 }
                 
             }

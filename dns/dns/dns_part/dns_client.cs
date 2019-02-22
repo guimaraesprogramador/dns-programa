@@ -11,14 +11,14 @@ namespace dns.dns_part
 {
     class dns_client
     {
-        public Socket acessar_internet(string enderenco)
+        public Socket acessar_internet(Uri enderenco)
         {
             try
             {
 
                 
                 Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                var ip = Dns.GetHostByName(enderenco);
+                var ip = Dns.GetHostByName(enderenco.Host);
                 IPAddress iPAddress = ip.AddressList[0];
                 IPEndPoint iPEnd = new IPEndPoint(iPAddress, 443);
                 s.Connect(iPEnd);
