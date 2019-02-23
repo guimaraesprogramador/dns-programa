@@ -20,7 +20,7 @@ namespace dns.dns_part
                 Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 var ip = Dns.GetHostByName(enderenco.Host);
                 IPAddress iPAddress = ip.AddressList[0];
-                IPEndPoint iPEnd = new IPEndPoint(iPAddress, 443);
+                IPEndPoint iPEnd = new IPEndPoint(iPAddress, enderenco.Port);
                 s.Connect(iPEnd);
                 return s;
             }

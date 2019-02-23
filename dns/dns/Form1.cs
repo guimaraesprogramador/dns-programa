@@ -33,6 +33,7 @@ namespace dns
                    port.Text =  uri.Port.ToString();
                     tcp.Text = DNS_RAIZ.ProtocolType.ToString();
                 }
+                DNS_RAIZ.Close();
                 
             }
             catch (Exception)
